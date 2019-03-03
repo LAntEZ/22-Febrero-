@@ -1,0 +1,14 @@
+function dydt= ejemplo2(t,y)
+a= 1;
+b= 1;
+dydt= (a*y)-(b*(y^2));
+
+end
+
+function [y,x]= ejemplo4()
+tspan= [0 10];
+y0= 1;
+[y,x]= ode45(@ejemplo4, tspan, y0);
+%[x, y]= ej41();
+plot(y,x)
+end
