@@ -1,0 +1,11 @@
+function dydx= ejemplo4(x,y)
+dydx= exp(x)/(2*y);
+end
+
+function [y,x]= ejemplo4()
+tspan= [0 10];
+y0= 1;
+[y,x]= ode45(@ejemplo4, tspan, y0);
+%[x, y]= ej41();
+plot(y,x)
+end
