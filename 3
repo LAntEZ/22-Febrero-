@@ -1,0 +1,11 @@
+function dydt= ejemplo3(t,y)
+dydt= exp(2*y)*sin(t);
+end
+
+function[y, t]= ejemplo3()
+tspan= [0 10];
+y0= 0;
+[y, t]= ode45(@ejemplo3, tspan, y0);
+%[t, y]= ej3();
+plot(t,y)
+end
