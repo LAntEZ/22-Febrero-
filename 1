@@ -1,0 +1,12 @@
+function dydt= ejemplo1(t,y)
+dydt= t/y;
+end 
+
+function [y,t]= call_ejemplo1()
+tspan= [0 15];
+y0= 1; 
+[y,t]= ode45(@ejemplo1, tspan, y0);
+
+%[t, y]= ej1();
+plot(t,y)
+end
