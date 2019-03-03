@@ -5,10 +5,10 @@ dydt= (a*y)-(b*(y^2));
 
 end
 
-function [y,x]= ejemplo4()
+function[y,t]= call_ejemplo2()
 tspan= [0 10];
-y0= 1;
-[y,x]= ode45(@ejemplo4, tspan, y0);
-%[x, y]= ej41();
-plot(y,x)
+y0= 10;
+[y,t]= ode15s(@ejemplo2, tspan, y0);
+%[t, y]= ej2();
+plot(t,y)
 end
